@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Minecraftia;
+    src: url(fonts/Minecraftia-Regular.ttf);
+}
 *{
     box-sizing: border-box;
 }
@@ -39,18 +43,17 @@ body, html{
 }
 
 .tabs-right img{
-    clip-path: circle();
     height: 50px;
 }
 
 .body{
     display: grid;
-    grid-template-rows: 600px 500px;
+    grid-template-rows: 600px 900px;
 }
 
 .welcome{
     grid-row: 1/2;
-    background-image: url("./background.png");
+    background-image: url("./images/background.png");
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-size: cover; /* Scale the image to cover the entire div */
     background-position: center;
@@ -68,4 +71,38 @@ body, html{
     font-size: 22px;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     margin-left: 140px;
+    margin-top: 0px;
+}
+
+.contents{
+    background-image: url('./images/woodbackground2.png');
+    display: grid;
+    grid-template-columns: 300px 800px 1fr;
+}
+
+.add-books{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 35px;
+}
+.add-books button{
+    width: 250px;
+    height: 60px;
+    font-family: 'Minecraftia';
+    border: 3px solid black;
+}
+
+.add-books button:hover{
+    background-color: green;
+    color: white;
+    border-color: white;
+}
+
+.pages{
+    background-image: url(./images/page.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
