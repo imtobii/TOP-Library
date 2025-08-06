@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    gap: 10px;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.logo{
+    width: 50px;
+}
+
+.tabs{
+    font-size: 18px;
+    display: flex;
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.tabs-left{
+    display: flex;
+    gap: 40px;
+}
+
+.tabs-right{
+    display: flex;
+    gap: 20px;
+}
+
+.tabs-right img{
+    clip-path: circle();
+    height: 50px;
+}
+
+.body{
+    display: grid;
+    grid-template-rows: 600px 500px;
+}
+
+.welcome{
+    grid-row: 1/2;
+    background-image: url("./background.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Scale the image to cover the entire div */
+    background-position: center;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+.title{
+    width: 600px;
+}
+
+.title-description{
+    font-family: 'Minecraft', sans-serif;
+    color: yellow;
+    font-size: 22px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    margin-left: 140px;
+}
