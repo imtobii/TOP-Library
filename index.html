@@ -34,13 +34,44 @@
         <div class="contents">
             <div class="add-books">
                 <button id="newBookBtn">+ New Book</button>
+
+                <dialog id="bookDialog">
+                    <form id="bookForm">
+                        <h2>Add a New Book</h2>
+                        <div class="inputs">
+                            <p>Book Title</p>
+                            <input type="text" id="bookTitle" name="bookTitle" required>
+                        </div>
+                        <div class="inputs">
+                            <p>Author</p>
+                            <input type="text" id="bookAuthor" name="bookTitle" required>
+                        </div>
+                        <div class="inputs">
+                            <p>Pages</p>
+                            <input type="number" id="bookPages" name="pages" required>
+                        </div>
+                        <label class="checkbox-label">
+                            <span>Read</span>
+                            <input type="checkbox" id="bookRead"/>
+                        </label>
+                        <div class="form-buttons">
+                            <button type="submit">Add Book</button>
+                            <button type="button" id="cancelBtn">Cancel</button>
+                        </div>
+                    </form>
+                </dialog>
                 <button id="filterBtn">Filter</button>
             </div>
-            <div class="pages">
-
+            <div class="books">
+                <div class="pagination">
+                    <button id="prevBtn">Previous</button>
+                    <span id="pageInfo"></span>
+                    <button id="nextBtn">Next</button>
+                </div>
             </div>
-            <div class="recommendation">
-
+            <div class="icons">
+                <img src="./images/items.png" alt="items">
+                
             </div>
         </div>
     </div>

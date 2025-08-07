@@ -77,7 +77,8 @@ body, html{
 .contents{
     background-image: url('./images/woodbackground2.png');
     display: grid;
-    grid-template-columns: 300px 800px 1fr;
+    grid-template-columns: 300px 680px 1fr;
+    padding-top: 40px;
 }
 
 .add-books{
@@ -86,23 +87,195 @@ body, html{
     align-items: center;
     padding-top: 50px;
     gap: 35px;
+    font-family: 'Minecraftia';
 }
 .add-books button{
     width: 250px;
     height: 60px;
-    font-family: 'Minecraftia';
     border: 3px solid black;
+    font-family: 'Minecraftia';
+    background-color: grey;
+    color: white;
+    text-shadow: 0 2px black, 2px 0 black;
+    letter-spacing: 1px;
+    font-size: 16px;
 }
 
 .add-books button:hover{
     background-color: green;
-    color: white;
     border-color: white;
 }
 
-.pages{
+#bookDialog{
+    background-image: url(./images/dirtbackground.webp);
+    color: white;
+    border-radius: 8px;
+    border-top: 10px solid green;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 0px 25px 20px 25px;
+}
+
+.form-buttons {
+  margin-top: 10px;
+}
+
+dialog input[type="text"],
+dialog input[type="number"] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 35px;
+}
+
+dialog input{
+    background: black;
+    border: 2px solid gray;
+    color: white;
+    font-family: 'Minecraftia';
+}
+
+
+.checkbox-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-label input{
+    transform: scale(1.5);
+    accent-color: green;
+}
+
+.checkbox-label span{
+    padding-top: 8px;
+}
+
+#bookDialog h2{
+    margin-bottom: 0;
+}
+
+#bookDialog .inputs{
+    margin-bottom: 35px;
+}
+
+#bookDialog p{
+    color: #ccc;
+    margin-bottom: 8px;
+    padding: 0;
+    height: 20px;
+}
+
+
+#bookDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px); 
+}
+
+.books{
     background-image: url(./images/page.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px; 
+    padding: 60px 80px 30px 80px;
+}
+
+.book-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 500px; 
+}
+
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border: 2px solid black;
+  font-family: 'Minecraftia', monospace;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 2px 2px 0 #333;
+  cursor: pointer;
+}
+
+.book-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.book-pages {
+  color: darkgray;
+  font-weight: bold;
+}
+
+.book-status {
+  white-space: nowrap;
+}
+
+.book-status .read {
+  color: green;
+  font-weight: bold;
+}
+
+.book-status .unread {
+  color: red;
+  font-weight: bold;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.delete-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  font-family: 'Minecraftia';
+  font-size: 16px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: gray;
+  color: white;
+  border: 2px solid black;
+  font-family: 'Minecraftia';
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #888;
+  cursor: default;
+}
+
+.icons{
+    height: 100%;
+    padding: 40px;
+}
+
+.icons img{
+    width: 100%;
+    object-fit: contain;
 }
